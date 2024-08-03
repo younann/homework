@@ -17,7 +17,7 @@ const fetchStockData = async (
     } else {
       try {
         const response = await axios.get(
-          `https://api.twelvedata.com/quote?symbol=${symbol}&apikey=2fe14aae24904252a124ad74367870b5`
+          `https://api.twelvedata.com/quote?symbol=${symbol}&apikey=${process.env.API_KEY}`
         );
         const item = response.data;
 
